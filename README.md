@@ -174,6 +174,7 @@ cargar(c : CUENTA ; débito : REAL) # Carga cuenta con la suma débito
 ```
 
 **postcondición**
+
     # El descubierto autorizado y el importe del `débito' no se
     # modifican
 ```
@@ -184,36 +185,57 @@ cargar(c : CUENTA ; débito : REAL) # Carga cuenta con la suma débito
 
 fin cargar
 
+consultar(c : CUENTA) : REAL # El saldo de la cuenta
 
+**precondición**
+   * c.saldo ≠ NULO
 
+**realización**
 
+```
+    Resultado ← c.saldo
+```
 
+**postcondición**
 
+   * Resultado = c.saldo
 
+fin consultar
 
+es_acreedora(c : CUENTA) : BOOLEANO # ¿es acreedora de la cuenta?
 
+**precondición**
+   * c.saldo ≠ NULO
 
+**Realización**
 
+```
+    Resultado ← (c.saldo > 0)
+```
 
+**postcondición**
 
+   * Resultado = (c.saldo > 0)
 
+fin es_acreedora
 
+es_deudora (c : CUENTA) : BOOLEANO # ¿es deudora de la cuenta?
 
+**precondición**
 
+   * c.saldo ≠ NULO
 
+**Realización**
 
+```
+     Resultado ← (– c.descubierto ≤ c.saldo ≤ 0)
+```
 
+**postcondición**
+  
+   * Resultado = (– c.descubierto ≤ c.saldo ≤ 0)
 
-
-
-
-
-
-
-
-
-
-
+fin es_deudora
 
 ### Ejercicio 12 c: descubiertos
 
