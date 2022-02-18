@@ -30,4 +30,23 @@ Precio con impuestos = precio sin impuestos * impuestos totales
 
 ### Ejercicio 09: media aritmetica ponderada
 
+**Entrada:**
+   * Coeficiente de ponderación 1: Real
+   * Coeficiente de ponderación 2: Real
+   * Coeficiente de ponderación 3: Real 
 
+**Variables:**
+   * Numero 1: Real
+   * Numero 2: Real
+   * Numero 3: Real
+   * Numero de números: Entero #los números de números que usamos para hacer las medias
+
+**Resultado:**
+   * Media aritmética: Real 
+   * Media ponderada: Real
+
+**Realización:** 
+```
+   Media aritmética= (numero 1 más numero 2 más numero 3) / número de números
+   Media ponderada= (numero 1 * peso numero 1 mas numero 2 * peso numero 2 más numero 3 * peso numero 3) / número de números
+```
