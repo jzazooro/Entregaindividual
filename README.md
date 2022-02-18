@@ -27,3 +27,7 @@ Si IVA 4%
      Impuestos totales= 4% + resto de impuestos
 Precio con impuestos = precio sin impuestos * impuestos totales
 ```
+
+### Ejercicio 09: media aritmetica ponderada
+
+
