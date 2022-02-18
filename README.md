@@ -160,6 +160,30 @@ abonar(c : CUENTA ; crédito : REAL) # Crédito cuenta de la suma crédito
 
 fin abonar
 
+cargar(c : CUENTA ; débito : REAL) # Carga cuenta con la suma débito
+
+**Precondición**
+   * c.saldo ≠ NULO
+   * débito ≠ NULO
+   * c.saldo + c.descubierto ≥ débito ≥ 0
+
+**realización**
+
+```
+    abonar(c, –débito)
+```
+
+**postcondición**
+    # El descubierto autorizado y el importe del `débito' no se
+    # modifican
+```
+    antiguo(c).descubierto = descubierto
+    antiguo(débito) = débito
+    c.saldo = antiguo(c).saldo – débito
+```
+
+fin cargar
+
 
 
 
