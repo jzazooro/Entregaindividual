@@ -86,3 +86,65 @@ Precio con impuestos = precio sin impuestos * impuestos totales
      Área del triángulo=(hipotenusa * lado) / 2
 ```
 
+### Ejercicio 11: salario y horas extra
+    
+**Precondición**
+   * salario_mensual_bruto > 0
+
+**constante**
+   * CANTIDAD_SEMANAS : ENTERO ← 52 # Cantidad de semanas de trabajo
+   * CANTIDAD_HORAS_SEMANA : ENTERO ← 35  # Cantidad legal de horas de trabajo semanales
+
+**realización**
+    # Cálculo del  precio_hora de la remuneración bruta de base
+```
+    Resultado ← salario_mensual_bruto x 12 / (REAL(CANTIDAD_HORAS_SEMANA) x REAL(CANTIDAD_SEMANAS))
+```
+**postcondición**
+   * Resultado = salario_mensual_bruto x 12,0 / REAL(35 x 52)
+
+### Ejercicio 12: cuenta de deposito
+
+Tipo cuenta estructura
+
+**Variables:**
+   * saldo: Real
+   * invariante: real # El descubierto no está autorizado
+
+**Realización:** 
+```   
+saldo ≥ 0
+```
+
+fin cuenta
+
+### Ejercicio 12 b: operaciones aplicables
+
+### Ejercicio 12 c: descubiertos
+
+abrir(Cuenta ; saldo_inicial : REAL ; descubierto_MAX : REAL)
+
+   * Inicializar cuenta mediante un saldo_inicial y un descubierto_MAX
+
+**Precondición**
+
+   * saldo_inicial > 0
+   * descubierto_MAX ≥ 0
+
+**realización**
+
+```
+c.descubierto ← descubierto_MAX
+c.saldo ← saldo_inicial
+```
+
+**postcondición**
+
+```
+c.descubierto = descubierto_MAX
+c.saldo = saldo_inicial
+```
+
+fin abrir
+
+
