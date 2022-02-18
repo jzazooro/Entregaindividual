@@ -2,7 +2,7 @@
 
 La direccion de github de este repositorio es: [github](https://github.com/jzazooro/Entregaindividual.git)
 
-### Ejercicio 08: porcentajes, IVA e inversiones
+### Ejercicio 08 a: porcentajes, IVA e inversiones
 
 **Entrada**
    * Precio sin impuestos: Real # lo que cuesta el producto sin tener en cuenta los impuestos
@@ -28,6 +28,23 @@ Si IVA 4%
 Precio con impuestos = precio sin impuestos * impuestos totales
 ```
 
+### Ejercicio 08 b
+
+**entrada**
+   * inversion: Real # dinero al que se le atribuyen los intereses
+   * tiempo: Entero # meses
+   * contante de interes: Real # multiplicador que decide los intereses
+
+**variable**
+   * capital total: Real # dinero teniendo en cuenta las ganancias de los intereses
+   * interes: Real # dinero ganado debido a las inversiones realizadas
+  
+  **realizacion**
+  ```
+  interes= inversion * tiempo * contante de proporcionalidad
+  capital total=inversion + interes
+  ```
+
 ### Ejercicio 09: media aritmetica ponderada
 
 **Entrada:**
@@ -50,3 +67,22 @@ Precio con impuestos = precio sin impuestos * impuestos totales
    Media aritmética= (numero 1 más numero 2 más numero 3) / número de números
    Media ponderada= (numero 1 * peso numero 1 mas numero 2 * peso numero 2 más numero 3 * peso numero 3) / número de números
 ```
+
+### Ejercicio 10: area del triangulo
+
+**Entrada**
+   * Hipotenusa: Real # longitud de la hipotenusa
+   * Lado: Real # longitud de uno de los lados
+
+**Resultado**
+   * Área del triángulo: Real #	
+
+**Precondición** 
+   + Hipotenusa>0
+   * Lado>0
+
+**Realización**
+```
+     Área del triángulo=(hipotenusa * lado) / 2
+```
+
