@@ -119,6 +119,77 @@ saldo ≥ 0
 fin cuenta
 
 ### Ejercicio 12 b: operaciones aplicables
+abrir(c : CUENTA ; saldo_inicial : REAL) # Inicializar cuenta mediante un `saldo_inicial'.
+
+**Precondición**
+
+   * saldo_inicial > 0
+
+**realización**
+
+   * c.descubierto ← 0
+   * c.saldo ← saldo_inicial
+
+**postcondición**
+
+    c.descubierto = 0 # El descubierto no está autorizado
+    antiguo(saldo_inicial) = saldo_inicial
+    c.saldo = saldo_inicial
+
+fin abrir
+
+abonar(c : CUENTA ; crédito : REAL) # Crédito cuenta de la suma crédito
+
+**Precondición**
+   * c.saldo ≠ NULO
+   * crédito ≠ NULO
+
+**realización**
+
+```
+    c.saldo ← c.saldo + crédito
+```
+
+**postcondición**
+    # El descubierto autorizado y el importe del `crédito' no se modifican
+```
+    antiguo(c).descubierto = descubierto
+    antiguo(c).crédito = crédito
+    c.saldo = antiguo(c).saldo + crédito
+```
+
+fin abonar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Ejercicio 12 c: descubiertos
 
